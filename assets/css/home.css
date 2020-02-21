@@ -1,0 +1,48 @@
+body{
+    background-color: lightgrey;
+}
+
+.main{
+    margin-left: 25%;
+    height: 80%;
+    width: 50%;
+    background-color: white;
+}
+
+.title{
+    text-align: center;
+    color: grey;
+    font-weight: 100;
+    font-family: monospace;
+}
+
+.headings{
+    color: grey;
+    font-weight: 200;
+    font-family: sans-serif;
+}
+.desc{
+    width:100%;
+    border: 0;
+}
+
+.line{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}
+
+.cat{
+    width: 40%;
+    display: inline-block;
+}
+
+.btn{
+    margin-left: 15%;;
+}
+.add{
+    background-color: chocolate;
+}
+.del{
+    margin-left: 0;
+    background-color: crimson;
+}
