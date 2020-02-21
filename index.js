@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 8000;
+const db = require('./config/mongoose');
+const Task = require('./models/tasks');
 
 app.use(express.static('./assets'));
 //use express router
