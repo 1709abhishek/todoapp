@@ -15,11 +15,12 @@
                     TODO App
                 </h1>
                 <label for="description" class="headings">Description</label><br>
+                <form action="/create-task" method="POST" class="form">
                 <input type="text" name="description" class="desc line" placeholder="What do you need to do?">
 
                 <div class="form-group cat">
                     <label for="sel1" class="headings">Category</label>
-                    <select class="form-control" id="sel1">
+                    <select class="form-control" id="sel1" name="category">
                       <option>Choose a category</option>
                       <option>Personal</option>
                       <option>Work</option>
@@ -30,12 +31,21 @@
                 </div>
                 <div class="date cat">
                     <label for="date-label" class="headings">Due Date</label>
-                    <input type="date" id="birthday" name="birthday">
+                    <input type="date" id="birthday" name="date">
                 </div>
-                <button class="btn add"><i class="fas fa-plus"></i>Add Task</button>
+                <button type="submit" class="btn add"><i class="fas fa-plus"></i>Add Task</button>
+                </form>
                 <button class="btn del"><i class="fas fa-trash-alt"></i>Delete Tasks</button>
                 <div class="elements">
-                    
+                    <% for(let i of task_list){ %>
+                        <div>
+                            <input type="checkbox">
+                            <span><%= i.description %></span>
+                            <br>
+                            <span><%= i.date %></span>
+                            <span><%= i.category %></span>
+                        </div>
+                    <% } %>
                 </div>
             </div>
         </div>
