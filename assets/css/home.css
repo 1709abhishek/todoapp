@@ -4,7 +4,7 @@ body{
 
 .main{
     margin-left: 25%;
-    height: 80%;
+    height: auto;
     width: 50%;
     background-color: white;
 }
@@ -45,4 +45,22 @@ body{
 .del{
     margin-left: 0;
     background-color: crimson;
+}
+
+.task-list{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.task-elements{
+    margin-right: 5px;
+}
+.cat-tag{
+    height:30px;
+    width:70px;
+    background-color:crimson;
+    margin-right: 5px;
+}
+.date{
+    font-size: 10px;
 }

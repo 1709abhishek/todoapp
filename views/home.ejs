@@ -39,11 +39,19 @@
                 <div class="elements">
                     <% for(let i of task_list){ %>
                         <div>
-                            <input type="checkbox">
-                            <span><%= i.description %></span>
-                            <br>
-                            <span><%= i.date %></span>
-                            <span><%= i.category %></span>
+                            <div class="task-list line">
+                            <div class="task-elements">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-elements">
+                                <span><%= i.description %></span>
+                                <br>
+                                <span class="date"><%= i.date %></span>
+                            </div>
+                            <div class="task-elements cat-tag">
+                                <span><%= i.category %></span>
+                            </div>
+                            </div>
                         </div>
                     <% } %>
                 </div>
