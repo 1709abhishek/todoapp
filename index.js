@@ -3,7 +3,7 @@ const app = express();
 const port = 8000;
 const db = require('./config/mongoose');
 const Task = require('./models/tasks');
-
+// const favorite = require('./assets/js/select');
 app.use(express.static('./assets'));
 //use express router
 app.use('/', require('./routes'));
@@ -31,6 +31,22 @@ app.post('/create-task', function(req,res){
         console.log('******', newTask);
         return res.redirect('back');
     });
+});
+
+app.get('/delete-contact',function(req,res){
+    // let id = req.query.id;
+    // Task.findByIdAndDelete(id, function(err){
+    //     if(err){
+    //         console.log('error in deleting an object from database');
+    //         return;
+    //     }
+    // })
+    let taskIndex = favorite.findIndex(task => task.id == id);
+    if(taskIndex != -1){
+        contactList.splice(taskIndex, 1);
+        console.log("I am here")
+    }
+    return res.redirect('back');
 });
 
 
