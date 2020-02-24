@@ -1,3 +1,4 @@
+// connecting the mongoose and mongodb 
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/todoapp_development');

@@ -1,4 +1,7 @@
 const Task = require('../models/tasks');
+
+// created controller for home
+
 module.exports.home = function(req,res){
     Task.find({}, function(err, tasks){
         if(err){console.log('error in fetching tasks from db');

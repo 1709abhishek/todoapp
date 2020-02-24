@@ -4,40 +4,25 @@ const port = 8000;
 const db = require('./config/mongoose');
 const Task = require('./models/tasks');
 
-// var jsdom = require("node-jsdom");
-
-// const jq = require('jquery');
-// require("jsdom").env("", function(err, window) {
-//     if (err) {
-//         console.error(err);
-//         return;
-//     }
-
-//     function doSomething(){
-//         var deferred = $.Deferred();
-//      }
-//     var $ = require("jquery")(window);
-//     const favorite = require('./assets/js/select');
-// });
 
 
 app.use(express.static('./assets'));
+
 //use express router
+
 app.use('/', require('./routes'));
-// const fav = require('./assets/js/select.js');
+
 
 //set up view engine
+
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.urlencoded());
 
+//created route to add task button
 
 app.post('/create-task', function(req,res){
-    // contactList.push({
-    //     name: req.body.name,
-    //     phone: req.body.phone
-    // });
-    // contactList.push(req.body);
+    
     Task.create({
         description: req.body.description,
         date: req.body.date,
@@ -50,6 +35,8 @@ app.post('/create-task', function(req,res){
         return res.redirect('back');
     });
 });
+
+// create route for delete tasks button
 
 app.post('/delete-todo', function(req, res) {
     let ids = req.body.task;
@@ -73,6 +60,14 @@ app.post('/delete-todo', function(req, res) {
     }
     return res.redirect('back');
 });
+
+//create route for category-wise button
+
+// app.get('retrieve-category',function(req,res){
+
+// })
+
+// Setup our server
 
 app.listen(port, function(err){
     if(err){

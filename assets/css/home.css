@@ -2,6 +2,8 @@ body{
     background-color: lightgrey;
 }
 
+/* defining the borders TODO app div contents */
+
 .main{
     margin-left: 25%;
     height: auto;
@@ -9,12 +11,16 @@ body{
     background-color: white;
 }
 
+/* styling the title todo app */
+
 .title{
     text-align: center;
     color: grey;
     font-weight: 100;
     font-family: monospace;
 }
+
+/* styling the labels of the form */
 
 .headings{
     color: grey;
@@ -26,14 +32,15 @@ body{
     border: 0;
 }
 
+/* defining the line boundaries */
+
 .line{
     width: 100%;
     border-bottom: 1px solid lightgray;
 }
 
-/* .btn{
-    margin-left: 15%;;
-} */
+/* adding color to the button */
+
 .add{
     background-color: chocolate;
 }
@@ -41,6 +48,8 @@ body{
     margin-left: 0;
     background-color: crimson;
 }
+
+/* arranging and styling the task list */
 
 .task-list{
     display: flex;
@@ -51,12 +60,17 @@ body{
 .task-elements{
     margin-right: 5px;
 }
+
+/* styling the right hand side category tag */
+
 .cat-tag{
     height:30px;
     width:70px;
     background-color:crimson;
     margin-right: 5px;
 }
+
+/* defining size to the date */
 .date{
     font-size: 10px;
 }
@@ -64,6 +78,7 @@ body{
     margin-right: 2px;
 }
 
+/* arranging the buttons and category and due date content with the help of flex */
 
 .arrange{
     display: flex;
@@ -77,10 +92,13 @@ body{
     justify-content: space-around;
 }
 
+/* defining the line between category and due date */
 .line-left{
     height: 30%;
     border-left: 1px solid lightgray;
 }
+
+/* defining width of category and due date input boxes */
 
 .cat{
     width: 50%;

@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+// created schema for tasks
+
 const taskSchema = new mongoose.Schema({
     description: {
         type: String,
@@ -13,6 +15,8 @@ const taskSchema = new mongoose.Schema({
         type: String,
     }
 });
+
+// created and exported mongoose model task as a variable
 
 const Task = mongoose.model('Task', taskSchema);
 
