@@ -83,7 +83,7 @@ body{
 .arrange{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 .arrange1{
@@ -93,15 +93,16 @@ body{
 }
 
 /* defining the line between category and due date */
-.line-left{
-    height: 30%;
-    border-left: 1px solid lightgray;
+.line-right{
+    height: 100%;
+    border-right: 1px solid lightgray;
 }
+
 
 /* defining width of category and due date input boxes */
 
 .cat{
-    width: 50%;
+    width: 90%;
     margin-left: 5px;
 }
 

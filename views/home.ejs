@@ -24,7 +24,7 @@
                     <input type="text" name="description" class="desc line" placeholder="What do you need to do?">
                     <!-- flexbox starting -->
                     <div class="arrange">
-                    <div class="form-group cat">
+                    <div class="form-group cat line-right">
                         <!-- dropdown list -->
                         <label for="sel1" class="headings">Category</label>
                         <select class="form-control" id="sel1" name="category">
@@ -36,18 +36,22 @@
                         <option>Other</option>
                         </select>
                     </div>
-                    <div class="cat line-left cat1">
+                    <div class="cat cat1">
                         <!-- input form for due date -->
                         <label for="date-label" class="headings">Due Date</label><br>
-                        <input type="date" id="birthday" name="date">
+                        <input type="date" id="birthday" name="date" class="cat cat1">
                     </div>
                     </div>
+
+                    <div class="line"></div>
+                    <br>
                     <!-- flexbox starting for buttons -->
                     <div class="arrange1">
                         <button type="submit" class="btn add"><i class="fas fa-plus"></i>Add Task</button>
                 </form>
                         <button type="submit" class="btn del" form="delete1"><i class="fas fa-trash-alt"></i>Delete Tasks</button>
                 </div>
+                    <div class="line"></div>
 
                 <!-- the delete form -->
 
