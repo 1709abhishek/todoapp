@@ -8,4 +8,4 @@ $(document).ready(function() {
     });
 });
 
-module.exports = { variableName: "favorite" };
+// module.exports = { variableName: "favorite" };

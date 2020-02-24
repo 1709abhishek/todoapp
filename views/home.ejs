@@ -37,14 +37,15 @@
                 <div class="arrange1">
                 <button type="submit" class="btn add"><i class="fas fa-plus"></i>Add Task</button>
                 </form>
-                <a href="/delete-contact"><button class="btn del"><i class="fas fa-trash-alt"></i>Delete Tasks</button></a>
+                <button type="submit" class="btn del" form="delete1"><i class="fas fa-trash-alt"></i>Delete Tasks</button>
                 </div>
+                <form id="delete1" action="/delete-todo" method="POST" >
                 <div class="elements">
                     <% for(let i of task_list){ %>
                         <div>
                             <div class="task-list line">
                             <div class="task-elements">
-                                <input type="checkbox" name="selected">
+                                <input type="checkbox" name=task value="<%= i._id %>">
                             </div>
                             <div class="task-elements">
                                 <span><%= i.description %></span>
@@ -58,6 +59,7 @@
                         </div>
                     <% } %>
                 </div>
+                </form>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
