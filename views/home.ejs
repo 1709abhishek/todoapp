@@ -50,6 +50,21 @@
                         <button type="submit" class="btn add"><i class="fas fa-plus"></i>Add Task</button>
                 </form>
                         <button type="submit" class="btn del" form="delete1"><i class="fas fa-trash-alt"></i>Delete Tasks</button>
+                        <form action="/retrieve-category" method="POST">
+                            <div class="form-group cat line-right">
+                                <!-- dropdown list -->
+                                <label for="sel2" class="headings">Retrieve Category</label>
+                                <select class="form-control" id="sel2" name="retrieveCategory">
+                                <option>Choose a category</option>
+                                <option>Personal</option>
+                                <option>Work</option>
+                                <option>School</option>
+                                <option>Cleaning</option>
+                                <option>Other</option>
+                                </select>
+                            </div>
+                            <button type="submit">Retrieve</button>
+                        </form>
                 </div>
                     <div class="line"></div>
 

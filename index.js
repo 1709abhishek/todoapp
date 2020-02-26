@@ -63,9 +63,18 @@ app.post('/delete-todo', function(req, res) {
 
 //create route for category-wise button
 
-// app.get('retrieve-category',function(req,res){
-
-// })
+app.post('/retrieve-category',function(req,res){
+    var retrieveCategory = req.body.retrieveCategory;
+    console.log(req.body.retrieveCategory);
+    Task.find({category: retrieveCategory}, function(err, tasks){
+        if(err){console.log('error in fetching tasks from db');
+        return;}
+    return res.render('home',{
+        title: "To-Do list",
+        task_list : tasks
+    });
+});
+})
 
 // Setup our server
 
